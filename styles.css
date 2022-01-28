@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Poppins:wght@200;400;500;600;800&family=Roboto:wght@400;500;700;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;400;500;600&display=swap');
 * {
   padding: 0;
   margin: 0;
@@ -15,6 +16,7 @@
   --montserrat: "Montserrat", sans-serif;
   --poppins: "Poppins", sans-serif;
   --roboto: "Roboto", sans-serif;
+  --roboto-mono: 'Roboto Mono', monospace;
 }
 html {
   font-size: 10px;
@@ -42,6 +44,40 @@ button {
   width: 90%;
   margin: 0 auto;
 }
+p{
+  font-family: var(--roboto-mono);
+}
+
+.section-head {
+  font-size: clamp(3rem, 4vw, 5rem);
+  color: var(--deep-dark);
+  font-family: var(--poppins);
+  font-weight: 800;
+  position: relative;
+  z-index: 1;
+}
+.section-head::before {
+  content: attr(data-outline);
+  position: absolute;
+  bottom: 15%;
+  left: 4%;
+  width: 100%;
+  color: transparent;
+  -webkit-text-stroke: 0.5px var(--primGreen);
+  z-index: -1;
+}
+.viewBtn{
+  background-color: var(--deep-dark);
+  color: var(--white);
+  padding: 0.6em 1.3em;
+  border-radius: 100px;
+  margin: 2rem auto;
+  font-size: 1.3rem;
+}
+.viewBtn:hover{
+ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
 /* global style ends */
 
 .navbar {
@@ -263,24 +299,7 @@ button {
   flex-direction: column;
   flex-wrap: nowrap;
 }
-.advantages .container .section-head {
-  font-size: clamp(3rem, 4vw, 5rem);
-  color: var(--deep-dark);
-  font-family: var(--poppins);
-  font-weight: 800;
-  position: relative;
-  z-index: 1;
-}
-.advantages .container .section-head::before {
-  content: attr(data-outline);
-  position: absolute;
-  bottom: 15%;
-  left: 4%;
-  width: 100%;
-  color: transparent;
-  -webkit-text-stroke: 0.5px var(--primGreen);
-  z-index: -1;
-}
+
 .advantages .container .adv-wrapper {
   width: 100%;
   display: grid;
@@ -326,6 +345,7 @@ button {
 }
 .advantages .container .adv-wrapper .adv-item-wrapper h3 {
   font-size: 3rem;
+  font-family: var(--roboto);
 }
 .advantages .container .adv-wrapper .adv-item-wrapper p {
   color: var(--gray-2);
@@ -336,4 +356,185 @@ button {
 }
 .advantages .container .adv-wrapper .adv-item-wrapper:hover p {
   color: var(--white);
+}
+
+/* products section starts */
+
+.products{
+  background: no-repeat  url('images/products-bg.jpg');
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.products .container{
+  padding: 10rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.products .container .section-head{
+  color: var(--white);
+}
+.products .container .all-products-wrapper{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  margin: 3rem 0;
+  width: 100%;
+  grid-gap: 0.5rem;
+}
+
+.box-item {
+  position: relative;
+  -webkit-backface-visibility: hidden;
+  width: 90%;
+  margin-bottom: 35px;
+  max-width: 100%;
+}
+
+
+.flip-box {
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  perspective: 1000px;
+  -webkit-perspective: 1000px;
+}
+
+.flip-box-front,
+.flip-box-back {
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  min-height: 350px;
+  -ms-transition: transform 0.7s cubic-bezier(.4,.2,.2,1);
+  transition: transform 0.7s cubic-bezier(.4,.2,.2,1);
+  -webkit-transition: transform 0.7s cubic-bezier(.4,.2,.2,1);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  background-color: var(--primGreen);
+}
+
+.flip-box-front:nth-child(odd),
+.flip-box-back:nth-child(odd){
+  background-color: var(--white);
+}
+.flip-box-front {
+  -ms-transform: rotateY(0deg);
+  -webkit-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  color: var(--deep-dark)
+}
+.flip-box-front span{
+font-size: 6rem;
+margin: 1.2rem auto;
+text-align: center;
+}
+.flip-box:hover .flip-box-front {
+  -ms-transform: rotateY(-180deg);
+  -webkit-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+  -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.flip-box-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -ms-transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-back {
+  -ms-transform: rotateY(0deg);
+  -webkit-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.flip-box .inner {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+  outline: 1px solid transparent;
+  -webkit-perspective: inherit;
+  perspective: inherit;
+  z-index: 2;
+  transform: translateY(-50%) translateZ(60px) scale(.94);
+  -webkit-transform: translateY(-50%) translateZ(60px) scale(.94);
+  -ms-transform: translateY(-50%) translateZ(60px) scale(.94);
+  top: 50%;
+}
+
+.flip-box-header {
+  font-size: 2.5rem;
+  font-weight: 500;
+  font-family: var(--poppins);
+}
+
+.flip-box p {
+  font-size: 1.2rem;
+  line-height: 1.5em;
+}
+
+.flip-box-img {
+  margin-top: 25px;
+}
+
+.flip-box-button {
+  background-color: transparent;
+  border: 2px solid #fff;
+  border-radius: 2px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 25px;
+  padding: 15px 20px;
+  text-transform: uppercase;
+}
+
+.customers{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+}
+.customers .container{
+  padding: 10rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.customers .container .customers-logo-wrapper{
+width: 100%;
+display: grid;
+grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+gap: 1rem;
+align-items: center;
+margin: 3rem 0;
+}
+
+.customers .container .customers-logo-wrapper  img{
+  width: 14rem;
+  height: 2.5rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .products .container .all-products-wrapper .box-item{
+   margin: 2rem auto;
+  }
 }
