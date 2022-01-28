@@ -261,6 +261,7 @@ button {
   justify-content: center;
   padding: 10rem 0;
   flex-direction: column;
+  flex-wrap: nowrap;
 }
 .advantages .container .section-head {
   font-size: clamp(3rem, 4vw, 5rem);
@@ -274,7 +275,7 @@ button {
   content: attr(data-outline);
   position: absolute;
   bottom: 15%;
-  left: 8%;
+  left: 4%;
   width: 100%;
   color: transparent;
   -webkit-text-stroke: 0.5px var(--primGreen);
@@ -283,5 +284,56 @@ button {
 .advantages .container .adv-wrapper {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-gap: 1rem;
+  margin: 5rem auto;
+}
+.advantages .container .adv-wrapper .adv-item-wrapper {
+  border-radius: 12px;
+  background-color: var(--white);
+  text-align: center;
+  padding: 1rem;
+  transition: all 0.4s ease-out;
+}
+
+.advantages .container .adv-wrapper .adv-item-wrapper span {
+  font-size: 3rem;
+  background-color: var(--dark-bg);
+  color: var(--white);
+  padding: 2rem;
+  border-radius: 100px;
+  margin: 1.3rem 0;
+}
+.advantages .container .adv-wrapper .adv-item-wrapper:nth-of-type(1) span,
+.advantages .container .adv-wrapper .adv-item-wrapper:nth-of-type(1):hover {
+  background-color: rgb(60, 179, 113);
+}
+.advantages .container .adv-wrapper .adv-item-wrapper:nth-of-type(2) span,
+.advantages .container .adv-wrapper .adv-item-wrapper:nth-of-type(2):hover {
+  background-color: rgb(255, 165, 0);
+}
+.advantages .container .adv-wrapper .adv-item-wrapper:nth-of-type(3) span,
+.advantages .container .adv-wrapper .adv-item-wrapper:nth-of-type(3):hover {
+  background-color: rgb(106, 90, 205);
+}
+.advantages .container .adv-wrapper .adv-item-wrapper:nth-of-type(4) span,
+.advantages .container .adv-wrapper .adv-item-wrapper:nth-of-type(4):hover {
+  background-color: rgb(255, 0, 0);
+}
+.advantages .container .adv-wrapper .adv-item-wrapper:hover span {
+  background-color: var(--deep-dark);
+  color: var(--white);
+}
+.advantages .container .adv-wrapper .adv-item-wrapper h3 {
+  font-size: 3rem;
+}
+.advantages .container .adv-wrapper .adv-item-wrapper p {
+  color: var(--gray-2);
+  font-family: var(--roboto);
+  font-size: 1.8rem;
+  width: 80%;
+  margin: 2rem auto;
+}
+.advantages .container .adv-wrapper .adv-item-wrapper:hover p {
+  color: var(--white);
 }
