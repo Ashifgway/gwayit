@@ -15,7 +15,7 @@
     <section id="home">
       <nav class="navbar">
         <div class="logo"><img src="images/logo.png" /></div>
-        <ul class="nav-links">
+        <ul class="nav-links open" id="sideToggle">
           <li>
             <a href="#" class="nav-link active">Home</a>
           </li>
@@ -29,7 +29,7 @@
             <a href="#" class="nav-link">Contact</a>
           </li>
         </ul>
-        <div class="menu">
+        <div class="menu" onclick="toggleMenu()">
           <span class="material-icons menu-icon"> menu </span>
         </div>
       </nav>
@@ -89,119 +89,131 @@
       </div>
     </section>
 
-
     <section class="products" id="products">
-     <div class="container">
-     <h1 data-outline="OUR PRODUCTS" class="section-head">OUR PRODUCTS</h1>
-     <div class="all-products-wrapper">
+      <div class="container">
+        <h1 data-outline="OUR PRODUCTS" class="section-head">OUR PRODUCTS</h1>
+        <div class="all-products-wrapper">
+          <div class="box-item">
+            <div class="flip-box">
+              <div class="flip-box-front text-center">
+                <div class="inner color-white">
+                  <span class="material-icons">laptop_mac</span>
+                  <h3 class="flip-box-header">Green NetBOX - GNB</h3>
+                </div>
+              </div>
+              <div class="flip-box-back text-center">
+                <div class="inner color-white">
+                  <h3 class="flip-box-header">Green NetBOX - GNB</h3>
+                  <p>
+                    GNB Provides secure remote office setup with typical ADSL
+                    and 3G/4G internet connectivity.
+                  </p>
+                  <button class="flip-box-button">Learn More</button>
+                </div>
+              </div>
+            </div>
+          </div>
 
-      <div class="box-item">
-    <div class="flip-box">
-      <div class="flip-box-front text-center">
-        <div class="inner color-white">
-           <span class="material-icons">laptop_mac</span>
-          <h3 class="flip-box-header">Green NetBOX - GNB</h3>        
-        </div>
-      </div>
-      <div class="flip-box-back text-center">
-        <div class="inner color-white">
-          <h3 class="flip-box-header">Green NetBOX - GNB</h3>
-          <p>GNB Provides secure remote office setup with typical ADSL and 3G/4G internet connectivity.</p>
-          <button class="flip-box-button">Learn More</button>
-        </div>
-      </div>
-    </div>
-  </div>
+          <div class="box-item">
+            <div class="flip-box">
+              <div class="flip-box-front text-center">
+                <div class="inner color-white">
+                  <span class="material-icons">calculate</span>
+                  <h3 class="flip-box-header">Green TallyBOX - GTB</h3>
+                </div>
+              </div>
+              <div class="flip-box-back text-center">
+                <div class="inner color-white">
+                  <h3 class="flip-box-header">Green TallyBOX - GTB</h3>
+                  <p>
+                    High Concurrence, High speed Forget Tally Data Rewrite,
+                    Centralize your data.
+                  </p>
+                  <button class="flip-box-button">Learn More</button>
+                </div>
+              </div>
+            </div>
+          </div>
 
-  <div class="box-item">
-    <div class="flip-box">
-      <div class="flip-box-front text-center">
-        <div class="inner color-white">
-           <span class="material-icons">calculate</span>
-          <h3 class="flip-box-header">Green TallyBOX - GTB</h3>        
-        </div>
-      </div>
-      <div class="flip-box-back text-center">
-        <div class="inner color-white">
-          <h3 class="flip-box-header">Green TallyBOX - GTB</h3>
-          <p>High Concurrence, High speed Forget Tally Data Rewrite, Centralize your data.</p>
-          <button class="flip-box-button">Learn More</button>
-        </div>
-      </div>
-    </div>
-  </div>
- 
-  <div class="box-item">
-    <div class="flip-box">
-      <div class="flip-box-front text-center">
-        <div class="inner color-white">
-          <span class="material-icons">dashboard</span>
-          <h3 class="flip-box-header">Green DataBOX - GDB</h3>         
-        </div>
-      </div>
-      <div class="flip-box-back text-center">
-        <div class="inner color-white">
-          <h3 class="flip-box-header">Green DataBOX - GDB</h3>
-          <p>Keep all your company data in a single place and let your employees access it from anywhere.</p>
-          <button class="flip-box-button">Learn More</button>
-        </div>
-      </div>
-    </div>
-  </div>
+          <div class="box-item">
+            <div class="flip-box">
+              <div class="flip-box-front text-center">
+                <div class="inner color-white">
+                  <span class="material-icons">dashboard</span>
+                  <h3 class="flip-box-header">Green DataBOX - GDB</h3>
+                </div>
+              </div>
+              <div class="flip-box-back text-center">
+                <div class="inner color-white">
+                  <h3 class="flip-box-header">Green DataBOX - GDB</h3>
+                  <p>
+                    Keep all your company data in a single place and let your
+                    employees access it from anywhere.
+                  </p>
+                  <button class="flip-box-button">Learn More</button>
+                </div>
+              </div>
+            </div>
+          </div>
 
-    <div class="box-item">
-    <div class="flip-box">
-      <div class="flip-box-front text-center">
-        <div class="inner color-white">
-          <span class="material-icons">desktop_mac</span>
-          <h3 class="flip-box-header">Green TinyBOX - GTyB</h3>
-        </div>
-      </div>
-      <div class="flip-box-back text-center">
-        <div class="inner color-white">
-          <h3 class="flip-box-header">Green TinyBOX - GTyB</h3>
-          <p>Drastically reduces power consumption, desktop price and maintenance charges.</p>
-          <button class="flip-box-button">Learn More</button>
-        </div>
-      </div>
-    </div>
-  </div>
-       
-   <div class="box-item">
-    <div class="flip-box">
-      <div class="flip-box-front text-center">
-        <div class="inner color-white">
-           <span class="material-icons">cloud_circle</span>
-          <h3 class="flip-box-header">Green Backup - GB</h3>
-        </div>
-      </div>
-      <div class="flip-box-back text-center">
-        <div class="inner color-white">
-          <h3 class="flip-box-header">Green Backup - GB</h3>
-          <p>Backup your company data in a secure server and automate the backup.</p>
-          <button class="flip-box-button">Learn More</button>
-        </div>
-      </div>
-     </div>
-     </div>
+          <div class="box-item">
+            <div class="flip-box">
+              <div class="flip-box-front text-center">
+                <div class="inner color-white">
+                  <span class="material-icons">desktop_mac</span>
+                  <h3 class="flip-box-header">Green TinyBOX - GTyB</h3>
+                </div>
+              </div>
+              <div class="flip-box-back text-center">
+                <div class="inner color-white">
+                  <h3 class="flip-box-header">Green TinyBOX - GTyB</h3>
+                  <p>
+                    Drastically reduces power consumption, desktop price and
+                    maintenance charges.
+                  </p>
+                  <button class="flip-box-button">Learn More</button>
+                </div>
+              </div>
+            </div>
+          </div>
 
-     </div>
-     </div>
+          <div class="box-item">
+            <div class="flip-box">
+              <div class="flip-box-front text-center">
+                <div class="inner color-white">
+                  <span class="material-icons">cloud_circle</span>
+                  <h3 class="flip-box-header">Green Backup - GB</h3>
+                </div>
+              </div>
+              <div class="flip-box-back text-center">
+                <div class="inner color-white">
+                  <h3 class="flip-box-header">Green Backup - GB</h3>
+                  <p>
+                    Backup your company data in a secure server and automate the
+                    backup.
+                  </p>
+                  <button class="flip-box-button">Learn More</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-  <section class="customers" id="customers" >
-  <div class="container">
-    <h1 data-outline="OUR CUSTOMERS" class="section-head">OUR CUSTOMERS</h1>
-    <div class="customers-logo-wrapper">
-    <img src="images/clientLogo/c1.jpg" alt="">
-    <img src="images/clientLogo/c2.png" alt="">
-    <img src="images/clientLogo/c3.png" alt="">
-    <img src="images/clientLogo/c4.jpg" alt="">
-    <img src="images/clientLogo/c5.png" alt="">
-   <img src="images/clientLogo/c6.jpg" alt="">
-  </div>
-  </div>
-  </section>
+    <section class="customers" id="customers">
+      <div class="container">
+        <h1 data-outline="OUR CUSTOMERS" class="section-head">OUR CUSTOMERS</h1>
+        <div class="customers-logo-wrapper">
+          <img src="images/clientLogo/c1.jpg" alt="" />
+          <img src="images/clientLogo/c2.png" alt="" />
+          <img src="images/clientLogo/c3.png" alt="" />
+          <img src="images/clientLogo/c4.jpg" alt="" />
+          <img src="images/clientLogo/c5.png" alt="" />
+          <img src="images/clientLogo/c6.jpg" alt="" />
+        </div>
+      </div>
+    </section>
 
     <script src="index.js"></script>
   </body>

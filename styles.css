@@ -515,7 +515,8 @@ p {
   background-color: var(--white);
 }
 .customers .container {
-  padding: 10rem 0;
+  padding-top: 10rem;
+  margin-bottom: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -523,11 +524,12 @@ p {
 }
 .customers .container .customers-logo-wrapper {
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1rem;
+  display: flex;
+  gap: 2rem;
   align-items: center;
-  margin: 3rem 0;
+  margin: 3rem auto;
+  justify-content: center;
+  overflow-x: auto;
 }
 
 .customers .container .customers-logo-wrapper img {
