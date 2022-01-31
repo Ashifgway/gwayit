@@ -13,7 +13,7 @@
   </head>
   <body>
     <section id="home">
-      <nav class="navbar">
+      <nav class="navbar" id="navbar">
         <div class="logo"><img src="images/logo.png" /></div>
         <ul class="nav-links open" id="sideToggle">
           <li>
@@ -207,135 +207,110 @@
 
         <div class="dealers-tab">
           <div class="dealers-nav">
+            <div class="tab active" onclick="tabNav(event,dealers)">
+              <span class="material-icons">store</span>
+              <h4>DEALERS</h4>
+            </div>
 
-           <div class="tab active">
-           <span class="material-icons">store</span>
-           <h4>DEALERS</h4>
-           </div>
+            <div class="tab" onclick="tabNav(event,distributors)">
+              <span class="material-icons">settings_ethernet</span>
+              <h4>DISTRIBUTORS</h4>
+            </div>
 
-            <div class="tab">
-           <span class="material-icons">settings_ethernet</span>
-           <h4>DISTRIBUTORS</h4>
-           </div>
-           
-            <div class="tab">
-           <span class="material-icons">engineering</span>
-           <h4>MANUFACTURERS</h4>
-           </div>
+            <div class="tab" onclick="tabNav(event,manufacturers)">
+              <span class="material-icons">engineering</span>
+              <h4>MANUFACTURERS</h4>
+            </div>
 
-            <div class="tab">
-           <span class="material-icons">supervisor_account</span>
-           <h4>SERVICE INDUSTRIES</h4>
-           </div>
-
+            <div class="tab" onclick="tabNav(event,serviceInd)">
+              <span class="material-icons">supervisor_account</span>
+              <h4>SERVICE INDUSTRIES</h4>
+            </div>
           </div>
 
-          <div class="dealers-info">
-           <div class="dealer-left">
-             <div class="dl-img"><img src="images/dealer.svg" alt=""></div>
-             <h3>Dealers</h3>
-           </div>
-           <div class="dealer-right">
-             <ul>
-              <li class="list-data">Maruti</li>
-              <li class="list-data">NEXA</li>
-              <li class="list-data">True Value</li>
-              <li class="list-data">TATA</li>
-              <li class="list-data">Bajaj</li>
-              <li class="list-data">Apple iPhone</li>
-              <li class="list-data">Sony Centre</li>
-              <li class="list-data">LG</li>
-            </ul>
-           </div>
+          <div class="dealer-wrapper">
+            <div class="dealers-info active" id="dealers">
+              <div class="dealer-left">
+                <div class="dl-img"><img src="images/dealer.svg" alt="" /></div>
+                <h3>DEALERS</h3>
+              </div>
+              <div class="dealer-right">
+                <ul>
+                  <li class="list-data">Maruti</li>
+                  <li class="list-data">NEXA</li>
+                  <li class="list-data">True Value</li>
+                  <li class="list-data">TATA</li>
+                  <li class="list-data">Bajaj</li>
+                  <li class="list-data">Apple iPhone</li>
+                  <li class="list-data">Sony Centre</li>
+                  <li class="list-data">LG</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="dealers-info distributors" id="distributors">
+              <div class="dealer-left">
+                <div class="dl-img">
+                  <img src="images/distributor.svg" alt="" />
+                </div>
+                <h3>DISTRIBUTORS</h3>
+              </div>
+              <div class="dealer-right">
+                <ul>
+                  <li class="list-data">Agro Pulses</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="dealers-info manufacturers" id="manufacturers">
+              <div class="dealer-left">
+                <div class="dl-img">
+                  <img src="images/manufacture.svg" alt="" />
+                </div>
+                <h3>MANUFACTURERS</h3>
+              </div>
+              <div class="dealer-right">
+                <ul>
+                  <li class="list-data">Coal-Coke</li>
+                  <li class="list-data">Tyres</li>
+                  <li class="list-data">Power Transformers</li>
+                  <li class="list-data">Fire Safety Equipment</li>
+                  <li class="list-data">Lubricants</li>
+                  <li class="list-data">Plastic Components</li>
+                  <li class="list-data">Industrial Gaskets</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="dealers-info serviceInd" id="serviceInd">
+              <div class="dealer-left">
+                <div class="dl-img">
+                  <img src="images/service.svg" alt="" />
+                </div>
+                <h3>SERVICE INDUSTRIES</h3>
+              </div>
+              <div class="dealer-right">
+                <ul>
+                  <li class="list-data">Auditors</li>
+                  <li class="list-data">Accounting Service</li>
+                  <li class="list-data">Tax Consultants</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
-        </div>
+      </div>
     </section>
 
     <script src="index.js"></script>
   </body>
 </html>
 
-
-<!-- <div class="tableWrapper">
-          <div class="thead">
-            <h3 class="d-head">DEALERS</h3>
-          </div>
-          <div class="tbody">
-            <ul>
-              <li class="list-data">Maruti</li>
-              <li class="list-data">NEXA</li>
-              <li class="list-data">True Value</li>
-              <li class="list-data">TATA</li>
-              <li class="list-data">Bajaj</li>
-              <li class="list-data">Apple iPhone</li>
-              <li class="list-data">Sony Centre</li>
-              <li class="list-data">LG</li>
-            </ul>
-          </div>
-        </div> -->
-<!-- 
-<div class="customers-logo-wrapper">
-          <img src="images/clientLogo/c1.jpg" alt="" />
-          <img src="images/clientLogo/c2.png" alt="" />
-          <img src="images/clientLogo/c3.png" alt="" />
-          <img src="images/clientLogo/c4.jpg" alt="" />
-          <img src="images/clientLogo/c5.png" alt="" />
-          <img src="images/clientLogo/c6.jpg" alt="" />
-        </div>
-
-
-
-        <div class="tableWrapper">
-          <div class="thead">
-            <h3>DISTRIBUTORS</h3>
-          </div>
-          <div class="tbody">
-            <ul>
-              <li class="list-data">Agro Pulses</li>
-              <li class="list-data"></li>
-              <li class="list-data"></li>
-              <li class="list-data"></li>
-              <li class="list-data"></li>
-              <li class="list-data"></li>
-              <li class="list-data"></li>
-              <li class="list-data"></li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="tableWrapper">
-          <div class="thead">
-            <h3>MANUFACTURERS</h3>
-          </div>
-          <div class="tbody">
-            <ul>
-              <li class="list-data">Coal-Coke</li>
-              <li class="list-data">Tyres</li>
-              <li class="list-data">Power Transformers</li>
-              <li class="list-data">Fire Safety Equipment</li>
-              <li class="list-data">Lubricants</li>
-              <li class="list-data">Plastic Components</li>
-              <li class="list-data">Industrial Gaskets</li>
-              <li class="list-data">LG</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="tableWrapper">
-          <div class="thead">
-            <h3>SERVICE INDUSTRIES</h3>
-          </div>
-          <div class="tbody">
-            <ul>
-              <li class="list-data">Auditors</li>
-              <li class="list-data">Accounting Service</li>
-              <li class="list-data">Tax Consultants</li>
-              <li class="list-data">Food Courts</li>
-              <li class="list-data"></li>
-              <li class="list-data"></li>
-              <li class="list-data"></li>
-              <li class="list-data"></li>
-            </ul>
-          </div>
-        </div> -->
+<!-- <div class="customers-logo-wrapper">
+  <img src="images/clientLogo/c1.jpg" alt="" />
+  <img src="images/clientLogo/c2.png" alt="" />
+  <img src="images/clientLogo/c3.png" alt="" />
+  <img src="images/clientLogo/c4.jpg" alt="" />
+  <img src="images/clientLogo/c5.png" alt="" />
+  <img src="images/clientLogo/c6.jpg" alt="" />
+</div> -->

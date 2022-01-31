@@ -3,11 +3,10 @@ let menu = document.querySelector(".menu");
 let menuicon = document.querySelector(".menu-icon");
 let view = document.getElementById("tab-viewer");
 
-
 let menuToggler = false;
 
 function toggleMenu() {
-    menuToggler = !menuToggler;
+  menuToggler = !menuToggler;
 
   function activate() {
     if (menuToggler === true) {
@@ -22,3 +21,24 @@ function toggleMenu() {
   }
   return activate();
 }
+
+let tabs = document.querySelectorAll(".tab");
+
+function tabNav(event, value) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("dealers-info");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tab");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  let contentId = value.getAttribute("id");
+
+  document.getElementById(contentId).style.display = "flex";
+  event.currentTarget.classList += " active";
+}
+
+let navbar = getElementById("navbar");
+let home = getElementById("home");
