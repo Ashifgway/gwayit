@@ -43,6 +43,7 @@ button {
   max-width: 1200px;
   width: 90%;
   margin: 0 auto;
+  padding:5rem 0;
 }
 p {
   font-family: var(--roboto-mono);
@@ -65,17 +66,6 @@ p {
   color: transparent;
   -webkit-text-stroke: 0.5px var(--primGreen);
   z-index: -1;
-}
-.viewBtn {
-  background-color: var(--deep-dark);
-  color: var(--white);
-  padding: 0.6em 1.3em;
-  border-radius: 100px;
-  margin: 2rem auto;
-  font-size: 1.3rem;
-}
-.viewBtn:hover {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 /* global style ends */
@@ -113,9 +103,9 @@ p {
 .navbar ul li a {
   display: inline-block;
   color: var(--dark-bg);
-  font-size: clamp(1rem, 2vw, 2rem);
+  font-size: clamp(1rem, 1.5vw, 1.6rem);
   font-family: "Poppins", sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   padding: 0.5rem 1rem;
   letter-spacing: 1px;
   position: relative;
@@ -127,9 +117,7 @@ p {
 #home {
   width: 100%;
   min-height: 100vh;
-  background: no-repeat
-      linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8)),
-    var(--gray-1);
+  background: var(--white);
   background-size: cover;
   background-position: center;
   overflow-x: hidden;
@@ -139,13 +127,12 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10rem 0;
 }
 .hero__left {
   flex: 8;
 }
 .hero__left h1 {
-  font-size: clamp(3.5rem, 3vw, 6rem);
+  font-size: clamp(3.5rem, 3vw, 8rem);
   font-family: var(--montserrat);
   font-weight: 800;
   text-transform: uppercase;
@@ -154,7 +141,7 @@ p {
 }
 .hero__left p {
   font-size: 1.8rem;
-  color: var(--gray-1);
+  color: var(--gray-2);
   width: 80%;
   line-height: 3rem;
   margin-bottom: 3rem;
@@ -173,7 +160,7 @@ p {
   outline: none;
 }
 .hero-button:hover {
-  transition: 0.5s ease-out background;
+  transition: transform 0.5s ease;
   background: rgb(0, 176, 80);
   background: linear-gradient(
     130deg,
@@ -188,15 +175,17 @@ p {
 .hero__right {
   flex: 6;
   text-align: right;
+ 
 }
 .hero__right .hero-img {
   height: 600px;
   width: 450px;
   min-width: 360px;
-  border: 2px solid var(--gray-1);
+ 
 }
 .hero__right .hero-img img {
   object-position: 80% 20%;
+   border-radius: 20px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -295,7 +284,6 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10rem 0;
   flex-direction: column;
   flex-wrap: nowrap;
 }
@@ -361,23 +349,18 @@ p {
 /* products section starts */
 
 .products {
-  background: no-repeat
-      linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.4)),
-    url("images/products-bg.jpg");
+  background: var(--white);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
 }
 .products .container {
-  padding: 10rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.products .container .section-head {
-  color: var(--white);
-}
+
 .products .container .all-products-wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -428,6 +411,7 @@ p {
   -ms-transform-style: preserve-3d;
   transform-style: preserve-3d;
   color: var(--deep-dark);
+  border: 1px solid var(--dark-bg);
 }
 .flip-box-front span {
   font-size: 6rem;
@@ -515,30 +499,132 @@ p {
   background-color: var(--white);
 }
 .customers .container {
-  padding-top: 10rem;
   margin-bottom: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.customers .container .customers-logo-wrapper {
-  width: 100%;
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-  margin: 3rem auto;
-  justify-content: center;
-  overflow-x: auto;
-}
-
-.customers .container .customers-logo-wrapper img {
-  width: 14rem;
-  height: 2.5rem;
-}
 
 @media only screen and (max-width: 768px) {
   .products .container .all-products-wrapper .box-item {
     margin: 2rem auto;
   }
+}
+
+.dealers-tab{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+.dealers-tab .dealers-nav{
+  display: flex;
+  width: 100%;
+}
+.dealers-tab .dealers-nav > .tab{
+ flex: 1;
+ background-color: var(--dark-bg);
+ align-items: center;
+ text-align: center;
+ padding: 2rem;
+ cursor: pointer;
+ color: var(--white);
+}
+.dealers-tab .dealers-nav > .tab:hover,
+.dealers-tab .dealers-nav > .tab.active{
+  color: var(--deep-dark);
+  background-color: var(--gray-1);
+}
+.dealers-tab .dealers-nav .tab h3{
+  font-size: 1.6rem;
+  margin: 0.5rem 0;
+}
+.dealers-tab .dealers-nav .tab span{
+  font-size: 4rem;
+}
+.dealers-info{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.dealer-left,.dealer-right{
+flex: 1;
+}
+.dealer-left .dl-img{
+  width: 70%;
+  min-width: 280px;
+  background-color: var(--dark-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+}
+.dealer-left h3{
+  font-size: 3.2rem;
+  color: var(--gray-2);
+  font-weight: 500;
+  font-family: var(--poppins);
+}
+.dealer-right ul{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+.dealer-right ul li{
+  font-family: var(--montserrat);
+  font-size: 2rem;
+  color: var(--deep-dark);
+  margin-bottom: 0.2em;
+  display: inline-block;
+  text-align: center;
+  padding: 0.2em 0.8em;
+  width: 80%;
+  background-size: 200%;
+  background: linear-gradient(to left, var(--gray-1) 50%, var(--white) 50%) right;
+    background-size: 200%;
+    transition: .5s ease-out;
+}
+.dealer-right ul li:hover{
+   background-position: left;
+}
+
+@media only screen and (max-width: 768px){
+   .dealers-info{
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+  .dealer-left .dl-img{
+   width: 100%;
+   max-width: 250px;
+  }
+  .dealer-left h3{
+    margin: 0.8rem 0;
+  }
+  .dealer-right ul li{
+    width: 100%;
+    
+    padding: 1rem 6rem;
+  }
+  
+.dealers-tab .dealers-nav > .tab{
+ 
+ padding: 1rem;
+
+}
+
+
+.dealers-tab .dealers-nav .tab span{
+  font-size: 3rem;
+}
+}
+@media only screen and (max-width: 450px){
+.dealers-tab .dealers-nav .tab h4{
+display: none;
+}
 }

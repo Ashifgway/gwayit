@@ -1,11 +1,13 @@
 let nav = document.querySelector(".nav-links");
 let menu = document.querySelector(".menu");
 let menuicon = document.querySelector(".menu-icon");
+let view = document.getElementById("tab-viewer");
+
 
 let menuToggler = false;
 
 function toggleMenu() {
-  menuToggler = !menuToggler;
+    menuToggler = !menuToggler;
 
   function activate() {
     if (menuToggler === true) {
